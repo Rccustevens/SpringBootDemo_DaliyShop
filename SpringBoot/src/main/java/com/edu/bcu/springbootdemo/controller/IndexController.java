@@ -1,6 +1,7 @@
 package com.edu.bcu.springbootdemo.controller;
 
 import com.edu.bcu.springbootdemo.domain.Category;
+import com.edu.bcu.springbootdemo.domain.CategoryBO;
 import com.edu.bcu.springbootdemo.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,8 +27,11 @@ public class IndexController {
         if (model.containsAttribute("USER_NAME_SESSION")) {
 
             List<Category> firstCategorysList = new ArrayList<Category>();
+            List<CategoryBO> allCategorysList = new ArrayList<CategoryBO>();
             firstCategorysList = this.categoryService.getAllFirstCategorys();
             model.addAttribute("firstCategorysList", firstCategorysList);
+            model.addAttribute("allCategorysList", allCategorysList);
+
 
             return "index";
         } else {

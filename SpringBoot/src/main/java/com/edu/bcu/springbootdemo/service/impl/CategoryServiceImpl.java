@@ -3,6 +3,7 @@ package com.edu.bcu.springbootdemo.service.impl;
 import java.util.List;
 import com.edu.bcu.springbootdemo.dao.CategoryMapper;
 import com.edu.bcu.springbootdemo.domain.Category;
+import com.edu.bcu.springbootdemo.domain.CategoryBO;
 import com.edu.bcu.springbootdemo.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,6 +21,11 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     public List<Category> getAllFirstCategorys() {
         return this.categoryMapper.findAllFirst();
+    }
+
+    @Override
+    public List<CategoryBO> getAllCategorys() {
+        return this.categoryMapper.findAll();
     }
 }
 

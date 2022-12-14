@@ -87,9 +87,9 @@
 	</div>
 	
 	<div class="sexy">
-		<div class="list_model">
+		<div class="list_model" th:each="categoryBO:${allCategorysList}">
 					<div class="list_title clearfix">
-						<h3 class="fl" id="model2">水果</h3>
+						<h3 class="fl" id="model2" th:text="${categoryBO.categoryName}"></h3>
 						<div class="subtitle fl">
 							<span>|</span>
 					<a href="list2.html?secondid=1">菠萝</a><a href="list2.html?secondid=5">苹果</a><a href="list2.html?secondid=10">梨</a><a href="list2.html?secondid=16">西瓜</a></div>
