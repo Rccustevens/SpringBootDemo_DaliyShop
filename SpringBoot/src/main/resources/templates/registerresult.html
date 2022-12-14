@@ -1,0 +1,16 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+<head>
+    <title>Title</title>
+</head>
+<body>
+<!--    <div th:text="${message}">注册结果页面</div>-->
+    <div th:object="${tUser}">
+        <span>succeed</span>
+        username:<span th:text="*{user_name}"></span></br>
+        address:<span th:text="*{address}"></span></br>
+        phone:<span th:text="*{phone}"></span></br>
+    </div>
+</body>
+</html>

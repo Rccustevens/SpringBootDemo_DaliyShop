@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+<head>
+  <title>Title</title>
+</head>
+<body>
+<!--    <div th:text="${message}">注册结果页面</div>-->
+    <script>
+        window.onload=function (){
+            let message='[[${message}]]';
+            // alert(message)
+            if (message==="true"){
+                // alert("success!")
+                window.location.href="index";
+            }else {
+                alert("error!")
+                window.location.href="login";
+            }
+        }
+    </script>
+</div>
+</body>
+</html>
